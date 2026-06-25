@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Leaf, CupSoda, MoonStar, ShoppingBag } from 'lucide-vue-next'
 
+defineEmits<{
+  'select-category': [category: string]
+}>()
+
 const categories = [
   { title: 'Snacks & Pantry', desc: 'Everyday Nigerian favourites.', icon: Leaf },
   { title: 'Drinks & Mixes', desc: 'Traditional drinks & functional blends.', icon: CupSoda },
@@ -10,23 +14,27 @@ const categories = [
 </script>
 
 <template>
-  <section id="shop" class="bg-cream-50 py-14 sm:py-16">
+  <section id="categories" class="bg-cream-50 py-10 sm:py-16">
     <div class="mx-auto max-w-[1180px] px-6 lg:px-8">
       <h2 class="leaf-ornament relative text-center font-serif text-[42px] font-bold leading-none text-forest-950">
         Shop by category
       </h2>
 
-      <div class="mt-12 grid grid-cols-2 gap-y-10 md:grid-cols-4 md:gap-y-0">
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:mt-12 md:grid-cols-4 md:gap-0">
         <article
           v-for="(category, index) in categories"
           :key="category.title"
-          class="flex flex-col items-center px-4 text-center md:min-h-[168px] md:px-9"
+          class="flex flex-col items-center rounded-md bg-white/45 px-3 py-5 text-center md:min-h-[168px] md:rounded-none md:bg-transparent md:px-9 md:py-0"
           :class="index > 0 ? 'md:border-l md:border-forest-950/12' : ''"
         >
-          <component :is="category.icon" class="mb-4 text-olive-700" :size="58" stroke-width="1.45" />
-          <h3 class="font-serif text-[25px] font-bold leading-tight text-forest-950">{{ category.title }}</h3>
-          <p class="mt-3 min-h-10 text-[13px] font-medium leading-[1.35] text-forest-950/75">{{ category.desc }}</p>
-          <a href="#best-sellers" class="mt-4 text-[13px] font-bold text-forest-950 transition hover:text-olive-600">
+          <component :is="category.icon" class="mb-3 text-olive-700 sm:mb-4" :size="46" stroke-width="1.45" />
+          <h3 class="font-serif text-[21px] font-bold leading-tight text-forest-950 sm:text-[25px]">{{ category.title }}</h3>
+          <p class="mt-2 min-h-9 text-[12px] font-medium leading-[1.35] text-forest-950/75 sm:mt-3 sm:text-[13px]">{{ category.desc }}</p>
+          <a
+            href="#shop"
+            class="mt-3 text-[13px] font-bold text-forest-950 transition hover:text-olive-600 focus:outline-none focus:ring-2 focus:ring-olive-600 sm:mt-4"
+            @click="$emit('select-category', category.title)"
+          >
             Shop now →
           </a>
         </article>

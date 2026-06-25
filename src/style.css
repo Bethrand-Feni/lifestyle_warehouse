@@ -56,12 +56,50 @@ input {
   transform: rotate(-32deg) scaleX(-1);
 }
 
+.hero {
+  background:
+    radial-gradient(circle at 76% 22%, rgb(130 157 89 / 0.28), transparent 42%),
+    radial-gradient(circle at 60% 75%, rgb(58 104 58 / 0.18), transparent 52%),
+    radial-gradient(circle at 0% 32%, rgb(3 16 9 / 0.34), transparent 38%),
+    radial-gradient(circle at 50% 100%, rgb(3 16 9 / 0.32), transparent 46%),
+    linear-gradient(115deg, #102b19 0%, #183a21 45%, #244d2b 72%, #15341d 100%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(8 24 13 / 0.26), transparent 38%),
+    linear-gradient(0deg, rgb(8 24 13 / 0.3), transparent 34%);
+  pointer-events: none;
+}
+
 .hero-shadow {
   background:
     linear-gradient(110deg, rgb(16 38 21 / 0.95), rgb(26 63 36 / 0.72)),
     radial-gradient(circle at 78% 18%, rgb(196 201 156 / 0.26), transparent 21rem),
     radial-gradient(circle at 92% 68%, rgb(215 187 118 / 0.14), transparent 18rem),
     #14331c;
+}
+
+.story-gradient {
+  background:
+    radial-gradient(circle at 78% 22%, rgb(130 157 89 / 0.22), transparent 42%),
+    radial-gradient(circle at 58% 72%, rgb(58 104 58 / 0.16), transparent 52%),
+    radial-gradient(circle at 0% 36%, rgb(3 16 9 / 0.34), transparent 38%),
+    radial-gradient(circle at 50% 100%, rgb(3 16 9 / 0.3), transparent 46%),
+    linear-gradient(115deg, #102b19 0%, #183a21 48%, #21492a 72%, #14331c 100%);
+}
+
+.story-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(8 24 13 / 0.24), transparent 40%),
+    linear-gradient(0deg, rgb(8 24 13 / 0.26), transparent 34%);
+  pointer-events: none;
 }
 
 .palm-shadow {
@@ -250,6 +288,28 @@ input {
   background:
     radial-gradient(circle at 50% 45%, rgb(215 187 118 / 0.17), transparent 7rem),
     linear-gradient(180deg, #f4ead8, #eadbc4);
+}
+
+.product-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0.18rem);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 1.4s ease-in-out infinite;
 }
 
 .scrollbar-none {
