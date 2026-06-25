@@ -1,0 +1,112 @@
+[
+  {
+    "id": "zobo-concentrate",
+    "name": "Zobo Concentrate",
+    "detail": "500ml",
+    "price": "R120.00",
+    "priceValue": 120,
+    "visual": "zobo",
+    "category": "Drinks & Mixes",
+    "description": "Rich hibiscus concentrate for chilled drinks, spritzers, mocktails, and everyday refreshment.",
+    "tags": ["Hibiscus", "No caffeine"]
+  },
+  {
+    "id": "suya-peanut-mix",
+    "name": "Suya Peanut Mix",
+    "detail": "200g",
+    "price": "R55.00",
+    "priceValue": 55,
+    "visual": "suya",
+    "category": "Snacks & Pantry",
+    "description": "Crunchy roasted peanuts finished with a warm suya-inspired spice blend.",
+    "tags": ["Spiced", "Snack"]
+  },
+  {
+    "id": "tigernut-date-energy-mix",
+    "name": "Tigernut & Date Energy Mix",
+    "detail": "150g",
+    "price": "R65.00",
+    "priceValue": 65,
+    "visual": "tiger",
+    "category": "Snacks & Pantry",
+    "description": "A naturally sweet blend for quick energy between work, gym, and school runs.",
+    "tags": ["Naturally sweet", "Energy"]
+  },
+  {
+    "id": "ginger-lemon-honey-concentrate",
+    "name": "Ginger, Lemon & Honey Concentrate",
+    "detail": "500ml",
+    "price": "R99.00",
+    "priceValue": 99,
+    "visual": "ginger",
+    "category": "Drinks & Mixes",
+    "description": "A bright ginger, lemon and honey concentrate for warm cups or iced wellness drinks.",
+    "tags": ["Ginger", "Wellness"]
+  },
+  {
+    "id": "sleep-tea",
+    "name": "Caffeine-Free Sleep Tea",
+    "detail": "20 Tea Bags",
+    "price": "R85.00",
+    "priceValue": 85,
+    "visual": "sleep",
+    "category": "Sleep & Recovery",
+    "description": "A calm evening tea blend made for slower nights and gentle recovery rituals.",
+    "tags": ["Caffeine-free", "Evening"]
+  },
+  {
+    "id": "after-owambo-recovery-pack",
+    "name": "After Owambo Recovery Pack",
+    "detail": "3 items",
+    "price": "R239.00",
+    "priceValue": 239,
+    "visual": "bundle-a",
+    "category": "Bundles",
+    "description": "A practical recovery bundle for the morning after a full celebration.",
+    "tags": ["Bundle", "Recovery"]
+  },
+  {
+    "id": "wind-down-recovery-pack",
+    "name": "Wind-Down & Recovery Pack",
+    "detail": "3 items",
+    "price": "R299.00",
+    "priceValue": 299,
+    "visual": "bundle-b",
+    "category": "Bundles",
+    "description": "A slower evening set with tea, snacks, and a pantry favourite.",
+    "tags": ["Bundle", "Evening"]
+  },
+  {
+    "id": "nigerian-pantry-starter-pack",
+    "name": "Nigerian Pantry Starter Pack",
+    "detail": "4 items",
+    "price": "R349.00",
+    "priceValue": 349,
+    "visual": "bundle-c",
+    "category": "Bundles",
+    "description": "An easy starter selection for stocking the pantry with NaijaLife essentials.",
+    "tags": ["Bundle", "Pantry"]
+  },
+  {
+    "id": "gym-bag-pack",
+    "name": "Gym Bag Pack",
+    "detail": "3 items",
+    "price": "R279.00",
+    "priceValue": 279,
+    "visual": "bundle-d",
+    "category": "Bundles",
+    "description": "Portable energy, spice, and recovery support for busy training days.",
+    "tags": ["Bundle", "Active"]
+  },
+  {
+    "id": "workday-energy-pack",
+    "name": "Workday Energy Pack",
+    "detail": "3 items",
+    "price": "R249.00",
+    "priceValue": 249,
+    "visual": "bundle-e",
+    "category": "Bundles",
+    "description": "A compact desk-friendly set for steady snacking and refreshing drinks.",
+    "tags": ["Bundle", "Workday"]
+  }
+]

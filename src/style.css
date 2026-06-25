@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #102615;
+  background: #fbfaf1;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, rgb(215 187 118 / 0.08), transparent 22rem),
+    #fbfaf1;
+}
+
+#app {
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.leaf-ornament::before,
+.leaf-ornament::after {
+  content: '';
+  position: absolute;
+  top: -0.65rem;
+  width: 0.6rem;
+  height: 0.32rem;
+  border-radius: 100% 0;
+  background: #6d7832;
+}
+
+.leaf-ornament::before {
+  left: calc(50% - 0.72rem);
+  transform: rotate(32deg);
+}
+
+.leaf-ornament::after {
+  left: calc(50% + 0.04rem);
+  transform: rotate(-32deg) scaleX(-1);
+}
+
+.hero-shadow {
+  background:
+    linear-gradient(110deg, rgb(16 38 21 / 0.95), rgb(26 63 36 / 0.72)),
+    radial-gradient(circle at 78% 18%, rgb(196 201 156 / 0.26), transparent 21rem),
+    radial-gradient(circle at 92% 68%, rgb(215 187 118 / 0.14), transparent 18rem),
+    #14331c;
+}
+
+.palm-shadow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.32;
+}
+
+.palm-shadow::before {
+  content: '';
+  position: absolute;
+  top: -7rem;
+  right: 15%;
+  width: 34rem;
+  height: 25rem;
+  background: repeating-linear-gradient(
+    106deg,
+    transparent 0 1.15rem,
+    rgb(255 255 255 / 0.22) 1.18rem 1.35rem,
+    transparent 1.4rem 2.2rem
+  );
+  filter: blur(2px);
+  transform: rotate(-18deg);
+}
+
+.display-shelf {
+  position: absolute;
+  left: 1rem;
+  right: 0;
+  bottom: 0.6rem;
+  height: 4.4rem;
+  border-radius: 0.35rem;
+  background: linear-gradient(180deg, #d8c7aa, #bda177);
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 0.22);
+  transform: perspective(26rem) rotateX(58deg) skewX(-8deg);
+}
+
+.bottle {
+  position: relative;
+  width: 5.7rem;
+  height: 17rem;
+  border-radius: 1.1rem 1.1rem 1.55rem 1.55rem;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.22), transparent 20% 72%, rgb(0 0 0 / 0.18)),
+    linear-gradient(180deg, #3b120d 0%, #130807 45%, #220908 100%);
+  box-shadow: 0 1.6rem 2rem rgb(0 0 0 / 0.28);
+}
+
+.bottle::before {
+  content: '';
+  position: absolute;
+  left: 1.3rem;
+  top: -3.1rem;
+  width: 3.1rem;
+  height: 4.2rem;
+  border-radius: 0.55rem 0.55rem 0.2rem 0.2rem;
+  background: linear-gradient(90deg, #3c140d, #150706 65%, #41130d);
+}
+
+.bottle::after {
+  content: '';
+  position: absolute;
+  left: 1.05rem;
+  top: -3.75rem;
+  width: 3.6rem;
+  height: 0.8rem;
+  border-radius: 0.2rem;
+  background: repeating-linear-gradient(90deg, #c88a48 0 0.25rem, #8d562b 0.25rem 0.42rem);
+  box-shadow: 0 0.2rem 0 #744522;
+}
+
+.bottle-label,
+.pouch-label,
+.box-label {
+  position: absolute;
+  color: #f5f2e7;
+  text-align: center;
+  line-height: 0.9;
+}
+
+.bottle-label {
+  inset: 5rem 0.55rem auto;
+  min-height: 6.7rem;
+  padding-top: 1rem;
+  border: 1px solid rgb(215 187 118 / 0.35);
+  background: linear-gradient(180deg, rgb(31 74 42 / 0.96), rgb(18 47 27 / 0.96));
+}
+
+.pouch {
+  position: relative;
+  width: 8.4rem;
+  height: 14rem;
+  border-radius: 0.45rem 0.45rem 1.1rem 1.1rem;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.18), transparent 24% 75%, rgb(0 0 0 / 0.18)),
+    linear-gradient(180deg, #386a48 0%, #285238 52%, #213d2d 52%, #213d2d 100%);
+  box-shadow: 0 1.5rem 2.4rem rgb(0 0 0 / 0.22);
+}
+
+.pouch::before {
+  content: '';
+  position: absolute;
+  inset: 0.7rem 0.65rem auto;
+  height: 0.14rem;
+  background: rgb(255 255 255 / 0.26);
+}
+
+.pouch::after {
+  content: '';
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 0.65rem;
+  height: 4.25rem;
+  border-radius: 0.3rem 0.3rem 0.8rem 0.8rem;
+  background:
+    radial-gradient(circle at 28% 42%, #d1964f 0 0.55rem, transparent 0.6rem),
+    radial-gradient(circle at 52% 38%, #bb7736 0 0.52rem, transparent 0.57rem),
+    radial-gradient(circle at 72% 55%, #dca05b 0 0.5rem, transparent 0.56rem),
+    radial-gradient(circle at 40% 68%, #a96732 0 0.48rem, transparent 0.54rem),
+    #cf8a46;
+}
+
+.pouch-label {
+  inset: 4rem 0.9rem auto;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: 0;
+}
+
+.glass {
+  position: relative;
+  width: 6rem;
+  height: 9.2rem;
+  border-radius: 0.45rem 0.45rem 1.3rem 1.3rem;
+  border: 2px solid rgb(255 255 255 / 0.48);
+  background:
+    radial-gradient(circle at 42% 32%, rgb(255 255 255 / 0.45) 0 0.45rem, transparent 0.5rem),
+    radial-gradient(circle at 62% 54%, #b92020 0 0.85rem, transparent 0.9rem),
+    radial-gradient(circle at 36% 64%, #8d1014 0 0.75rem, transparent 0.8rem),
+    linear-gradient(180deg, rgb(112 13 18 / 0.78), rgb(78 6 10 / 0.9));
+  box-shadow: 0 1rem 2.1rem rgb(0 0 0 / 0.2);
+}
+
+.ginger {
+  width: 7.3rem;
+  height: 3.4rem;
+  border-radius: 55% 45% 45% 55%;
+  background:
+    radial-gradient(circle at 74% 28%, #b88b58 0 0.8rem, transparent 0.85rem),
+    radial-gradient(circle at 21% 68%, #a3723e 0 0.75rem, transparent 0.8rem),
+    linear-gradient(130deg, #cfaa78, #a47442);
+  box-shadow: inset 0 0.35rem 0.8rem rgb(255 255 255 / 0.2), 0 0.9rem 1.4rem rgb(0 0 0 / 0.16);
+}
+
+.basket {
+  position: absolute;
+  left: 45%;
+  right: 1rem;
+  bottom: 0.8rem;
+  height: 11rem;
+  border-radius: 0 0 12rem 12rem;
+  background:
+    repeating-linear-gradient(45deg, rgb(76 45 22 / 0.28) 0 0.3rem, transparent 0.3rem 0.62rem),
+    repeating-linear-gradient(-45deg, rgb(255 255 255 / 0.12) 0 0.25rem, transparent 0.25rem 0.58rem),
+    linear-gradient(180deg, #bc884d, #87552b);
+  box-shadow: inset 0 1rem 1.5rem rgb(65 36 15 / 0.35), 0 1.4rem 3rem rgb(0 0 0 / 0.24);
+}
+
+.basket::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  right: -1.5rem;
+  top: -0.9rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0.55rem solid #b87c43;
+  background: transparent;
+}
+
+.product-card-image {
+  background:
+    radial-gradient(circle at 50% 45%, rgb(215 187 118 / 0.17), transparent 7rem),
+    linear-gradient(180deg, #f4ead8, #eadbc4);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
